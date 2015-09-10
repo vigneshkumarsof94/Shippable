@@ -53,7 +53,8 @@ if(isset($_REQUEST['url'])) {
 			foreach($new_result as $i){
 				//extracting the created_at key's value from each object of the result (new_result)
 				//and pushing the values to issues array
-				array_push($issues, $i["created_at"]);
+				if(count($i) == 19)	
+				  array_push($issues, $i["created_at"]);
 			}
 		}
 		//Identifying the current time (TimeStamp Format)
